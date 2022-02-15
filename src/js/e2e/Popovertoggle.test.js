@@ -16,7 +16,7 @@ describe('Popover Widget ', () => {
   afterAll(async () => {
     await browser.close();
   });
-  describe('Popover Click ', () => {
+  describe('Popover Widget ', () => {
     test('should show popover by click', async () => {
       await page.goto(baseUrl);
       const btn = await page.$('.btn');
