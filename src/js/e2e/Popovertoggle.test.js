@@ -19,7 +19,7 @@ describe('Popover Widget ', () => {
   describe('Popover Click ', () => {
     test('should show popover by click', async () => {
       await page.goto(baseUrl);
-      const btn = await page.$('.btn-popover');
+      const btn = await page.$('.btn');
       btn.click();
       await page.waitForSelector('.popover');
     });

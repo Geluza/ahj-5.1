@@ -1,6 +1,6 @@
 // TODO: write your code here
 function clickPop() {
-  const btn = document.querySelector('.btn-popover');
+  const btn = document.querySelector('.btn');
   const popover = document.querySelector('.popover');
   btn.addEventListener('click', (event) => {
     event.preventDefault();
