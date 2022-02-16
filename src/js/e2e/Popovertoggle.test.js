@@ -8,8 +8,8 @@ describe('Popover Widget ', () => {
   beforeAll(async () => {
     browser = await puppetteer.launch({
       headless: true,
-      //slowMo: 100,
-      //devtools: false,
+      // slowMo: 100,
+      // devtools: false,
     });
     page = await browser.newPage();
   });
