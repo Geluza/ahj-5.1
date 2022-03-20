@@ -1,6 +1,5 @@
 import puppetteer from 'puppeteer';
 import { fork } from 'child_process';
-import { hasUncaughtExceptionCaptureCallback } from 'process';
 
 jest.setTimeout(30000);
 describe('Popover Widget ', () => {
@@ -43,7 +42,7 @@ describe('Popover Widget ', () => {
       btn.click();
       btn.click();
       const popover = await page.$('.popover');
-      expect(popover).toBeNull;   
+      expect(popover).toBeNull();
     });
   });
 });
