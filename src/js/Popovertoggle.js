@@ -1,14 +1,24 @@
 // TODO: write your code here
 function clickPop() {
+  const container = document.querySelector(".popover-btn-click");
   const btn = document.querySelector('.btn');
-  const popover = document.querySelector('.popover');
   btn.addEventListener('click', (event) => {
     event.preventDefault();
-    popover.classList.toggle('disactive');
+    if(container.contains(document.querySelector(".popover"))) {
+      document.querySelector(".popover").remove();
+   } else {
+    const popover = document.createElement("div");
+    popover.className = "popover"; 
+    popover.innerHTML += `<h3 class="pop-title">${btn.dataset.title}</h3><span class="pop-text">${btn.dataset.text}</span>`;  
+    const indent = 5;
     btn.offsetParent.appendChild(popover);
-    popover.style.left = `${btn.offsetLeft - popover.offsetWidth / 8}px`;
-    popover.style.top = `${btn.offsetTop - popover.offsetHeight - btn.offsetHeight / 4}px`;
+    popover.style.left = `${btn.offsetLeft}px`;
+    popover.style.top = `${btn.offsetTop - popover.offsetHeight - indent}px`
+    } 
   });
 }
 
 clickPop();
+
+
+
