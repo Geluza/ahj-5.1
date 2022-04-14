@@ -33,14 +33,14 @@ describe('Popover Widget ', () => {
     test('should show popover by click', async () => {
       await page.goto(baseUrl);
       const btn = await page.$('.btn');
-      btn.click();
+      await btn.click();
       await page.waitForSelector('.popover');
     });
     test('should remove popover by click', async () => {
       await page.goto(baseUrl);
       const btn = await page.$('.btn');
-      btn.click();
-      btn.click();
+      await btn.click();
+      await btn.click();
       const popover = await page.$('.popover');
       expect(popover).toBeNull();
     });
